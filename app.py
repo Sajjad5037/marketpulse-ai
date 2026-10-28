@@ -83,7 +83,10 @@ def heading(title, subtitle):
     st.caption(subtitle)
 
 if page == "Overview":
-    heading("Market intelligence overview", "A prototype for collecting search signals and spotting emerging products.")
+    heading(
+        "Emerging Product Discovery",
+        "Identify products with rising search interest and prioritize them for further research."
+    )
     st.info("This interactive prototype uses simulated data. Connect a provider API to replace sample values with real observations.")
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Tracked keywords", f"{filtered['keyword'].nunique():,}", "Across selected filters")
